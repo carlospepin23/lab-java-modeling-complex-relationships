@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface AssociationOfNursesRepository extends JpaRepository<AssociationOfNurses, Integer> {
+public interface AssociationOfNursesRepository extends JpaRepository<AssociationOfNurses, String> {
 
 }

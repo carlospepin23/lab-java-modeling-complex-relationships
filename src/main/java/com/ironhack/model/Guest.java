@@ -2,12 +2,18 @@ package com.ironhack.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Guest {
     @Id
     private String name;
     private Status status;
+
+    @ManyToOne
+    @JoinColumn(name = "event_id")
+    private Event event;
 
     private enum Status {
         ATTENDING, NOT_ATTENDING, NO_RESPONSE

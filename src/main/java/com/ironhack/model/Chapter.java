@@ -13,11 +13,12 @@ public class Chapter {
     @OneToOne
     private Member president;
 
-    @ManyToOne
-    private AssociationOfNurses associationOfNurses;
-
     @OneToMany
     private List<Member> listOfMembers;
+
+    @ManyToOne
+    @JoinColumn(name="association_of_nurses_id")
+    private AssociationOfNurses associationOfNurses;
 
     public Chapter() {
     }

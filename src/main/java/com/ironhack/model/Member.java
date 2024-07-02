@@ -1,8 +1,6 @@
 package com.ironhack.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 
 import java.util.Date;
 
@@ -11,7 +9,10 @@ public class Member {
     @Id
     private String name;
     private Status status;
+
+    @Temporal(TemporalType.DATE)
     private Date renewalDate;
+
     @ManyToOne
     private Chapter chapter;
 

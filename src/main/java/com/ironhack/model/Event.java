@@ -14,7 +14,7 @@ public class Event {
     private Integer duration;
     private String location;
 
-    @OneToMany
+    @OneToMany(mappedBy = "event")
     private List<Guest> listOfGuests;
 
     @ManyToOne
